@@ -4,9 +4,13 @@ import time
 class SendRequest:
     def __init__(self):
         self.makingList = MakeList()
+        self.URL_list = None
+
+    def receive_url_list(self):
         self.URL_list = self.makingList.get_list()
 
     def get_error_url(self, url_list):
+        self.receive_url_list()
         error_url_list = []
         for url in url_list:
             try:
