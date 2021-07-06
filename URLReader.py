@@ -1,6 +1,6 @@
 class readFile:
-    def readURL(URL):
-        f = open(URL, 'r')
+    def readURL():
+        f = open("URLlist.txt", 'r')
 
         URL_list = []
 
