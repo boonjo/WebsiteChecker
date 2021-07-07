@@ -14,7 +14,7 @@ def listToString(list):
 
 # Token can be found in OAuth & Permissions -> OAuth Tokens for Your Workspace
 # Make sure to allow chat:write for the Bot Token to enable writing messages
-SLACK_BOT_TOKEN="xoxb-1488964595344-2240858379797-5p1bkaRj149lZEscKhgroPBI"
+SLACK_BOT_TOKEN="xoxb-1488964595344-2240858379797-jFLzBfhggKp5rVFX0gfNiAkx"
 slack_token = os.environ.get(SLACK_BOT_TOKEN)
 client = WebClient(token=SLACK_BOT_TOKEN)
 
