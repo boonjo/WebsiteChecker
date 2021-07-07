@@ -1,6 +1,7 @@
 import requests
 import time
 from URLReader import readFile
+from urllib3.exceptions import HTTPError as BaseHTTPError
 
 class URLChecker:
     def __init__(self):
@@ -12,14 +13,11 @@ class URLChecker:
 
     def get_error_url(self):
         self.receive_url_list()
-        error_url_list = []
+        error_msg_list = []
         for url in self.URL_list:
             try:
-                status_code = requests.get(url).status_code
-            except:
-                time.sleep(2)
-                error_url_list.append(url)
-                continue
-            if 400 <= status_code:
-                error_url_list.append(url)
-        return error_url_list
+                r = requests.get(url)
+                r.raise_for_status()
+            except requests.exceptions.RequestException as err:
+                error_msg_list.append(err)
+        return error_msg_list
