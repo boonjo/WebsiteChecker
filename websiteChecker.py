@@ -8,13 +8,13 @@ def listToString(list):
     """
     
     # initialize an empty string
-    strlist = " \n" 
-    
-    return (strlist.join(list))
+    strlist = "\n\n" 
+     
+    return (strlist.join("- " + str(site) for site in list))
 
 # Token can be found in OAuth & Permissions -> OAuth Tokens for Your Workspace
 # Make sure to allow chat:write for the Bot Token to enable writing messages
-SLACK_BOT_TOKEN="xoxb-2256225158097-2240634984229-X6j1Tbpt1s20Bz0EXeqCnLWO"
+SLACK_BOT_TOKEN="xoxb-1488964595344-2240858379797-5p1bkaRj149lZEscKhgroPBI"
 slack_token = os.environ.get(SLACK_BOT_TOKEN)
 client = WebClient(token=SLACK_BOT_TOKEN)
 
@@ -27,8 +27,8 @@ if len(errorlist) != 0:
     try:
         # Leave a message in the appropriate channel
         response = client.chat_postMessage(
-            channel="C027BNN46GL",
-            text="There are " + str(len(errorlist)) + " site(s) that are dead: \n "+ listToString(errorlist)
+            channel="C0275RZNWSW",
+            text="There are " + str(len(errorlist)) + " site(s) that are dead: \n\n "+ listToString(errorlist)
         )
     except SlackApiError as e:    
         assert e.response["error"] 
