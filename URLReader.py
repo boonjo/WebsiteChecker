@@ -1,8 +1,12 @@
+import os
+
+SITE_LIST = os.environ["SITE_LIST"]
+
 class readFile:
     """Reads the file URLlist.txt and returns a list of URLs"""
     
     def readURL(self):
-        f = open("URLlist.txt", 'r')
+        f = open(SITE_LIST, 'r')
 
         URL_list = []
 
