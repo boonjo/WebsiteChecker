@@ -32,7 +32,7 @@ if len(errorlist) != 0:
         # Leave a message in the appropriate channel
         response = client.chat_postMessage(
             channel=slack_data['channel'],
-            text="There are " + str(len(errorlist)) + " site(s) that are dead: \n\n "+ listToString(errorlist)
+            text="🚨 There are " + str(len(errorlist)) + " site(s) that are dead 🚨: \n\n "+ listToString(errorlist)
         )
     except SlackApiError as e:    
         assert e.response["error"] 
