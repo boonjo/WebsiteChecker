@@ -1,4 +1,3 @@
 preprocessing
-pyyaml
 requests
 slack_sdk
