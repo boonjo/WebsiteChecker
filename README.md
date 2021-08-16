@@ -12,9 +12,9 @@ Clone it via [git clone](https://github.com/git-guides/git-clone) to install Web
 git clone https://github.com/boonjo/WebsiteChecker.git
 ```
 
-## [Ofelia](https://github.com/mcuadros/ofelia)
+## Ofelia
 
-Ofelia is a modern and low footprint job scheduler for docker environments.
+[Ofelia](https://github.com/mcuadros/ofelia) is a modern and low footprint job scheduler for docker environments.
 
 This is implemented to schdeule and automate the process of checking websites.
 From docker-compose.yml, you can see:
