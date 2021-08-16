@@ -28,4 +28,4 @@ labels:
 
 Ofelia is enabled by the first label, then it can be scheduled with the time interval preference of the user, and lastly choose which command to run. 
 
-From the example above, it will run websiteChecker every minute. 
+From the example above, it will run Website Checker every minute. 
